@@ -1,14 +1,90 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+  }
+  
+  ol, ul {
+    padding-left: 30px;
+  }
+  
+  .board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  .status {
+    margin-bottom: 10px;
+  }
+  
+  .square {
+    background: rgb(192, 125, 236);
+    border: 1px solid rgb(22, 4, 4);
+    float: left;
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 34px;
+    height: 80px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    color:#fff;
+    text-align: center;
+    width: 80px;
+  }
+  
+  .square:focus {
+    outline: none;
+  }
+  
+  .kbd-navigation .square:focus {
+    background: #ddd;
+  }
+  
+  .game {
+    display: flex;
+    flex-direction: column;
+  }
+  .game-board{
+    margin:auto;
+    margin-bottom: 10px;
+  }
+  
+  .game-info {
+    margin-left: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 1px 1px #000000;
+  }
+  .game-info > .step {
+    margin: 0 auto;
+    text-align: center;
+    background: rgb(43, 255, 0);
+    padding:12px;
+    color: white;
+    font-weight: bolder;
+  }
+  .game-info div ol{
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+  }
+  .game-info div ol li button {
+    padding: 12px;
+    font-size: 15px;
+    border:none;
+    outline: none;
+    cursor: pointer;
+    margin: 2px;
+    background: rgb(112, 140, 216);
+    color:white;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  @media (min-width:480px){
+    .game{
+      display: flex;
+      flex-direction: row;
+      margin: 0 auto;
+      width: 480px;
+    }
+  }
